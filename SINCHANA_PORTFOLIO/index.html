@@ -1158,80 +1158,8 @@
     .contact p {
       color: var(--text-dim);
       font-size: 17px;
-      max-width: 580px;
+      max-width: 480px;
       margin: 0 0 var(--sp-3);
-    }
-
-    .contact-form {
-      max-width: 600px;
-      margin-top: 24px;
-      margin-bottom: 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      background: var(--bg-card);
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 28px;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-    }
-
-    @media (max-width: 600px) {
-      .form-row {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .form-group label {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--teal);
-      font-family: 'JetBrains Mono', monospace;
-    }
-
-    .form-group input,
-    .form-group textarea {
-      background: var(--bg-panel);
-      border: 1px solid var(--line-soft);
-      border-radius: 8px;
-      padding: 12px 14px;
-      color: #fff;
-      font-family: inherit;
-      font-size: 14.5px;
-      outline: none;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-      border-color: var(--teal);
-      box-shadow: 0 0 10px rgba(100, 255, 218, 0.25);
-    }
-
-    .submit-btn {
-      align-self: flex-start;
-      cursor: pointer;
-    }
-
-    .contact-status-msg {
-      font-size: 14px;
-      margin-top: 4px;
-      font-weight: 500;
-    }
-
-    .contact-status-msg.success {
-      color: #64ffda;
     }
 
     footer {
@@ -1734,35 +1662,10 @@
       <span class="tag mono">07 / TRANSMIT</span>
       <h2>Get in touch</h2>
     </div>
-    <p>Open to AI/ML and full-stack internship opportunities. Feel free to send a message directly or connect via email below.</p>
-
-    <form class="contact-form" name="contact" method="POST" data-netlify="true" onsubmit="handleContactSubmit(event)">
-      <input type="hidden" name="form-name" value="contact" />
-      <div class="form-row">
-        <div class="form-group">
-          <label for="contact-name">Your Name</label>
-          <input type="text" id="contact-name" name="name" placeholder="Sinchana H P" required />
-        </div>
-        <div class="form-group">
-          <label for="contact-email">Your Email</label>
-          <input type="email" id="contact-email" name="email" placeholder="name@example.com" required />
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="contact-subject">Subject</label>
-        <input type="text" id="contact-subject" name="subject" placeholder="AI/ML Opportunity / Inquiry" required />
-      </div>
-      <div class="form-group">
-        <label for="contact-message">Message</label>
-        <textarea id="contact-message" name="message" rows="4" placeholder="Write your message..." required></textarea>
-      </div>
-      <button type="submit" class="btn primary submit-btn">Send Message 🚀</button>
-      <div id="contact-status" class="contact-status-msg"></div>
-    </form>
-
-    <div class="hero-links" style="margin-top: 24px;">
-      <a class="btn primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=sinchanapurushotham2@gmail.com" target="_blank" rel="noopener">Send Mail (Gmail) ✉</a>
-      <button class="btn" type="button" onclick="copyEmail(this)">Copy Email 📋</button>
+    <p>Open to AI/ML and full-stack internship opportunities. If you're building something interesting, I'd like to hear
+      about it.</p>
+    <div class="hero-links">
+      <a class="btn primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=sinchanapurushotham2@gmail.com" target="_blank" rel="noopener">Send Mail ✉</a>
       <a class="btn" href="https://www.linkedin.com/in/sinchana-h-p03/" target="_blank" rel="noopener">LinkedIn ↗</a>
       <a class="btn" href="https://github.com/SINCHANAPURUSHOTHAM" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
@@ -1773,45 +1676,6 @@
   </footer>
 
   <script>
-    // Copy Email to Clipboard Helper
-    function copyEmail(btn) {
-      const email = "sinchanapurushotham2@gmail.com";
-      navigator.clipboard.writeText(email).then(() => {
-        const orig = btn.innerText;
-        btn.innerText = "Email Copied! ✓";
-        btn.style.borderColor = "#64ffda";
-        btn.style.color = "#64ffda";
-        setTimeout(() => {
-          btn.innerText = orig;
-          btn.style.borderColor = "";
-          btn.style.color = "";
-        }, 2500);
-      });
-    }
-
-    // Contact Form Handler
-    function handleContactSubmit(e) {
-      e.preventDefault();
-      const statusDiv = document.getElementById('contact-status');
-      const form = e.target;
-      const formData = new FormData(form);
-
-      fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString()
-      })
-      .then(() => {
-        statusDiv.className = "contact-status-msg success";
-        statusDiv.innerText = "Thank you! Your message has been sent successfully. ✨";
-        form.reset();
-      })
-      .catch(() => {
-        statusDiv.className = "contact-status-msg success";
-        statusDiv.innerText = "Thank you! Your message has been sent. ✨";
-        form.reset();
-      });
-    }
     // Certificate Accordion Dropdown Toggle
     function toggleCert(btn) {
       const panel = btn.nextElementSibling;
