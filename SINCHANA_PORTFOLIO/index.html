@@ -566,8 +566,8 @@
     .section-head h2:hover::after {
       height: 4px;
       box-shadow: 0 0 15px rgba(255, 255, 255, 1),
-                  0 0 30px rgba(255, 255, 255, 0.8),
-                  0 0 45px rgba(255, 255, 255, 0.5);
+        0 0 30px rgba(255, 255, 255, 0.8),
+        0 0 45px rgba(255, 255, 255, 0.5);
     }
 
     .section-head h2 .accent {
@@ -1665,7 +1665,8 @@
     <p>Open to AI/ML and full-stack internship opportunities. If you're building something interesting, I'd like to hear
       about it.</p>
     <div class="hero-links">
-      <a class="btn primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=sinchanapurushotham2@gmail.com" target="_blank" rel="noopener">Send Mail ✉</a>
+      <a class="btn primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=sinchanapurushotham2@gmail.com"
+        target="_blank" rel="noopener">Send Mail ✉</a>
       <a class="btn" href="https://www.linkedin.com/in/sinchana-h-p03/" target="_blank" rel="noopener">LinkedIn ↗</a>
       <a class="btn" href="https://github.com/SINCHANAPURUSHOTHAM" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
@@ -1682,12 +1683,12 @@
       const isOpen = panel.classList.contains('open');
       document.querySelectorAll('.cert-dropdown-panel').forEach(p => p.classList.remove('open'));
       document.querySelectorAll('.cert-dropdown-btn').forEach(b => {
-        b.innerHTML = 'View Certificate ▾';
+        b.innerHTML = 'View Achievement ▾';
       });
 
       if (!isOpen) {
         panel.classList.add('open');
-        btn.innerHTML = 'Close Certificate ▴';
+        btn.innerHTML = 'Close Achievement ▴';
       }
     }
 
