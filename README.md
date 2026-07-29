@@ -89,7 +89,7 @@ This portfolio features a modern, ultra-responsive dark-mode interface built wit
 
 - 🚩 **Coordinator — Kannada Sahithya Sangha & Literary Society (DSCE)**: Led 50+ members organizing state-level literary contests and enrichment camps for 100+ students.
 - 🎨 **Lead — Akira Cultural Club (CSE, DSCE)**: Directed a 40-member core team across 8+ technical and cultural events reaching 250+ participants.
-- 🖌️ **Graphic Designer & Event Lead — ByteSync Technical Club (DSCE)**: Designed complete visual branding and promotional media for *Recurzive*, a 24-hour hackathon.
+- 🖌️ **Graphic Designer — ByteSync Technical Club (DSCE)**: Designed complete visual branding and promotional media for *Recurzive*, a 24-hour hackathon.
 
 ---
 
